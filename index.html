@@ -1,0 +1,71 @@
+
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Calculadora OOP - JavaScript</title>
+  <!-- Aqui a gente importa o arquivo de estilos -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Toda a calculadora está dentro dessa div -->
+  <div class="calc" role="application" aria-label="Calculadora orientada a objetos">
+
+    <!-- Área onde aparece o número digitado ou o resultado -->
+    <div class="display" id="display">0</div>
+
+    <!-- Mostra qual operação está sendo feita (ex: 7 + ...) -->
+    <div class="small">Operação atual: <span id="currentOp">—</span></div>
+
+    <!-- Os botões da calculadora -->
+    <div class="keys" role="group" aria-label="Teclado da calculadora">
+      <!-- Primeira fileira -->
+      <button class="clear" data-action="clear">C</button>
+      <button data-action="back">⌫</button>
+      <button data-action="percent">%</button>
+      <button class="op" data-action="/">÷</button>
+
+      <!-- Segunda fileira -->
+      <button data-number="7">7</button>
+      <button data-number="8">8</button>
+      <button data-number="9">9</button>
+      <button class="op" data-action="*">×</button>
+
+      <!-- Terceira fileira -->
+      <button data-number="4">4</button>
+      <button data-number="5">5</button>
+      <button data-number="6">6</button>
+      <button class="op" data-action="-">−</button>
+
+      <!-- Quarta fileira -->
+      <button data-number="1">1</button>
+      <button data-number="2">2</button>
+      <button data-number="3">3</button>
+      <button class="op" data-action="+">+</button>
+
+      <!-- Última fileira -->
+      <button data-number="0">0</button>
+      <button data-number=".">.</button>
+      <button class="equal" data-action="=">=</button>
+      <button data-action="toggle-sign">±</button>
+    </div>
+
+    <!-- Botões de memória + histórico -->
+    <div class="side">
+      <div class="mem">
+        <!-- Botões de memória (como calculadora científica) -->
+        <button data-action="mc">MC</button>
+        <button data-action="mplus">M+</button>
+        <button data-action="mminus">M-</button>
+        <button data-action="mr">MR</button>
+      </div>
+      <!-- Histórico de cálculos aparece aqui -->
+      <div class="history" id="history"></div>
+    </div>
+  </div>
+
+  <!-- Aqui a gente carrega o código JavaScript -->
+  <script src="calculator.js"></script>
+</body>
+</html>

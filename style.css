@@ -1,0 +1,87 @@
+/* Define o estilo padrão da página */
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f3f4f6;
+  color: #0f172a;
+}
+
+/* Centraliza a calculadora na tela */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* Caixa principal da calculadora */
+.calc {
+  background: #fff;
+  border-radius: 12px; /* cantos arredondados */
+  box-shadow: 0 10px 30px rgba(2,6,23,0.12); /* sombra leve */
+  width: 360px;
+  padding: 18px;
+}
+
+/* Tela da calculadora (onde aparece o número) */
+.display {
+  background: #0b1220;
+  color: #e6eef8;
+  padding: 16px;
+  border-radius: 8px;
+  text-align: right; /* texto alinhado à direita */
+  font-size: 32px;
+  min-height: 56px;
+  box-sizing: border-box;
+}
+
+/* Texto menor que mostra a operação atual */
+.small {
+  font-size: 12px;
+  color: #9aa4b2;
+}
+
+/* Área com os botões em formato de grade */
+.keys {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 10px;
+  margin-top: 14px;
+}
+
+/* Estilo básico de todos os botões */
+button {
+  padding: 14px;
+  border-radius: 8px;
+  border: 0;
+  background: #eef2f7;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Botões especiais */
+button.op { background: #feeec1; } /* operações */
+button.equal { grid-column: span 2; background: #c7f0d1; } /* botão de igual */
+button.clear { background: #ffd6d6; } /* botão de limpar */
+
+/* Área lateral (histórico e memória) */
+.side { margin-top: 12px; font-size: 14px; }
+
+/* Histórico de cálculos */
+.history {
+  margin-top: 10px;
+  background: #fafafa;
+  padding: 8px;
+  border-radius: 8px;
+  max-height: 120px;
+  overflow: auto; /* adiciona barra de rolagem se ficar muito grande */
+  font-size: 13px;
+}
+
+/* Botões de memória (MC, M+, etc.) */
+.mem {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
