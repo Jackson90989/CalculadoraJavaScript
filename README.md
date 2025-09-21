@@ -7,7 +7,7 @@
 
 ---
 
-## 🛠️ Tecnologias usadas
+## Tecnologias usadas
 
 * **HTML5** → para a estrutura da página.
 * **CSS3** → para o design e cores.
